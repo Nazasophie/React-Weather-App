@@ -1,0 +1,175 @@
+/* Container styling for the main content area */
+.container {
+    position: relative;
+    width: 607px;
+    height: 829px;
+    margin: auto;
+    margin-top: 75px;
+    border-radius: 12px;
+    overflow: hidden; /* Ensure the pseudo-element doesn't overflow */
+  
+    /* Background image applied to the pseudo-element */
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url('https://img.freepik.com/free-photo/landscape-photo-whale-island-vietnam_181624-31537.jpg?w=360&t=st=1701937084~exp=1701937684~hmac=3ada669d8e80a868cdd5e0bf9b615158c284a6780f2a11ae5f2b8411fa246b9a');
+      background-size: cover;
+      filter: blur(2px); /* Adjust the blur amount as needed */
+      z-index: -1; /* Place the pseudo-element behind other content */
+    }
+  }
+  
+
+  
+  
+  
+  /* Styling for the top bar containing the search input */
+  .top-bar {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    padding-top: 60px;
+  }
+  
+  .top-bar input {
+    display: flex;
+    width: 362px;
+    height: 78px;
+    background: #ebfffc;
+    border-radius: 800px;
+    outline: none;
+    border-radius: 40px;
+    padding-left: 40px;
+    color: #626262;
+    font-size: 20px;
+    font-weight: 400;
+  }
+  
+  /* Styling for the search icon */
+  .searchIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 68px;
+    height: 68px;
+    background: white;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background 0.3s; /* Add a smooth transition for the background color */
+  
+    /* Add styles for when hovering over the icon */
+    &:hover {
+      background: lightgray; /* Change the background color on hover */
+    }
+  
+    /* Add styles for when the icon is clicked */
+    &:active {
+      background: gray; /* Change the background color on click */
+    }
+  }
+  
+  /* Styling for the weather image */
+  .weather-image {
+    margin-top: 49px;
+    display: flex;
+    justify-content: center;
+    color: aqua;
+  }
+  
+  /* Styling for the temperature display */
+  .weather-temp {
+    display: flex;
+    justify-content: center;
+    color: rgb(71, 71, 147);
+    font-size: 120px;
+    font-weight: 400;
+  }
+  
+  /* Styling for the location display */
+  .weather-location {
+    display: flex;
+    justify-content: center;
+    color: yellow;
+    font-size: 60px;
+    font-weight: 400;
+  }
+  
+  /* Styling for the data container */
+  .data-container {
+    margin-top: 50px;
+    color: white;
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Styling for individual data elements */
+  .element {
+    margin: auto;
+    display: flex;
+    gap: 12px;
+  }
+  
+  /* Styling for the data text */
+  .data {
+    font-size: 34px;
+    font-weight: 400;
+  }
+  
+  /* Styling for additional text */
+  .text {
+    font-size: 20px;
+    font-weight: 400;
+  }
+  
+  /* Styling for icons within the data */
+  .icon {
+    margin-top: 10px;
+  }
+  
+  /* Media query for iPhone-sized screens */
+@media only screen and (max-width: 375px) {
+    .container {
+      width: 100%;
+      height: auto;
+      margin-top: 30px;
+    }
+  
+    .top-bar {
+      flex-direction: column;
+      align-items: center;
+      padding-top: 30px;
+    }
+  
+    .top-bar input {
+      width: 100%;
+    }
+  
+    .weather-image,
+    .weather-temp,
+    .weather-location,
+    .data-container {
+      margin-top: 30px;
+    }
+  
+    .weather-temp {
+      font-size: 80px;
+    }
+  
+    .weather-location {
+      font-size: 40px;
+    }
+  
+    .data-container {
+      flex-direction: column;
+    }
+  
+    .element {
+      margin: auto;
+      flex-direction: column;
+      gap: 8px;
+    }
+  }
